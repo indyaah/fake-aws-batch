@@ -12,7 +12,6 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 
-        <spring-cloud-aws.version>2.1.2.RELEASE</spring-cloud-aws.version>
         <spring-boot.version>2.1.5.RELEASE</spring-boot.version>
         <aws.java.sdk.version>1.11.590</aws.java.sdk.version>
     </properties>
@@ -39,6 +38,11 @@
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk-batch</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.docker-java</groupId>
+            <artifactId>docker-java</artifactId>
+            <version>3.1.5</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
