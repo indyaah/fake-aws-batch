@@ -2,9 +2,11 @@ package pro.anuj.tools.aws.batch.repository.impl.inmemory;
 
 import com.amazonaws.services.batch.model.CreateJobQueueRequest;
 import com.amazonaws.services.batch.model.CreateJobQueueResult;
+import org.springframework.stereotype.Component;
 import pro.anuj.tools.aws.batch.exceptions.NotImplementedException;
 import pro.anuj.tools.aws.batch.repository.JobQueueRepository;
 
+@Component
 public class InMemoryJobQueueRepository implements JobQueueRepository {
 
     @Override
