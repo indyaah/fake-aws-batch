@@ -8,10 +8,12 @@ import com.amazonaws.services.batch.model.DescribeJobQueuesRequest;
 import com.amazonaws.services.batch.model.DescribeJobQueuesResult;
 import com.amazonaws.services.batch.model.UpdateJobQueueRequest;
 import com.amazonaws.services.batch.model.UpdateJobQueueResult;
+import org.springframework.stereotype.Component;
 import pro.anuj.tools.aws.batch.repository.JobQueueRepository;
 import pro.anuj.tools.aws.batch.service.JobQueueService;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+import pro.anuj.tools.aws.batch.exceptions.NotImplementedException;
 
+@Component
 public class JobQueueServiceImpl implements JobQueueService {
 
     private final JobQueueRepository jobQueueRepository;

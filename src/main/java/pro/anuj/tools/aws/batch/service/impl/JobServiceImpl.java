@@ -10,10 +10,12 @@ import com.amazonaws.services.batch.model.SubmitJobRequest;
 import com.amazonaws.services.batch.model.SubmitJobResult;
 import com.amazonaws.services.batch.model.TerminateJobRequest;
 import com.amazonaws.services.batch.model.TerminateJobResult;
+import org.springframework.stereotype.Component;
 import pro.anuj.tools.aws.batch.repository.JobRepository;
 import pro.anuj.tools.aws.batch.service.JobService;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+import pro.anuj.tools.aws.batch.exceptions.NotImplementedException;
 
+@Component
 public class JobServiceImpl implements JobService {
 
     private final JobRepository jobRepository;

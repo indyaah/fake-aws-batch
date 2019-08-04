@@ -17,7 +17,7 @@ import pro.anuj.tools.aws.batch.service.JobService;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
-@RestController("/v1")
+@RestController
 public class JobController {
     private final JobService jobService;
 
@@ -25,27 +25,27 @@ public class JobController {
         this.jobService = jobService;
     }
 
-    @PostMapping(value = "/canceljob", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/v1/canceljob", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
     public CancelJobResult cancel(@RequestBody CancelJobRequest request) {
         return jobService.cancelJob(request);
     }
 
-    @PostMapping(value = "/submitjob", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/v1/submitjob", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
     public SubmitJobResult submit(@RequestBody SubmitJobRequest request) {
         return jobService.submitJob(request);
     }
 
-    @PostMapping(value = "/terminatejob", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/v1/terminatejob", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
     public TerminateJobResult terminate(@RequestBody TerminateJobRequest request) {
         return jobService.terminateJob(request);
     }
 
-    @PostMapping(value = "/describejobs", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/v1/describejobs", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
     public DescribeJobsResult describe(@RequestBody DescribeJobsRequest request) {
         return jobService.describeJobs(request);
     }
 
-    @PostMapping(value = "/listjobs", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/v1/listjobs", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
     public ListJobsResult list(@RequestBody ListJobsRequest request) {
         return jobService.listJobs(request);
     }

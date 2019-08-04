@@ -15,7 +15,7 @@ import pro.anuj.tools.aws.batch.service.JobQueueService;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
-@RestController("/v1")
+@RestController
 public class JobQueueController {
 
     private final JobQueueService jobQueueService;
@@ -24,22 +24,22 @@ public class JobQueueController {
         this.jobQueueService = jobQueueService;
     }
 
-    @PostMapping(value = "/createjobqueue", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/v1/createjobqueue", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
     public CreateJobQueueResult create(@RequestBody CreateJobQueueRequest request) {
         return jobQueueService.createJobQueue(request);
     }
 
-    @PostMapping(value = "/updatejobqueue", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/v1/updatejobqueue", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
     public UpdateJobQueueResult update(@RequestBody UpdateJobQueueRequest request) {
         return jobQueueService.updateJobQueue(request);
     }
 
-    @PostMapping(value = "/deletejobqueue", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/v1/deletejobqueue", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
     public DeleteJobQueueResult delete(@RequestBody DeleteJobQueueRequest request) {
         return jobQueueService.deleteJobQueue(request);
     }
 
-    @PostMapping(value = "/describejobqueues", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/v1/describejobqueues", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
     public DescribeJobQueuesResult describe(@RequestBody DescribeJobQueuesRequest request) {
         return jobQueueService.describeJobQueues(request);
     }

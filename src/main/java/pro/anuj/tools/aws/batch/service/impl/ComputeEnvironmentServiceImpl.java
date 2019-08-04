@@ -8,10 +8,12 @@ import com.amazonaws.services.batch.model.DescribeComputeEnvironmentsRequest;
 import com.amazonaws.services.batch.model.DescribeComputeEnvironmentsResult;
 import com.amazonaws.services.batch.model.UpdateComputeEnvironmentRequest;
 import com.amazonaws.services.batch.model.UpdateComputeEnvironmentResult;
+import org.springframework.stereotype.Component;
 import pro.anuj.tools.aws.batch.repository.ComputeEnvironmentRepository;
 import pro.anuj.tools.aws.batch.service.ComputeEnvironmentService;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+import pro.anuj.tools.aws.batch.exceptions.NotImplementedException;
 
+@Component
 public class ComputeEnvironmentServiceImpl implements ComputeEnvironmentService {
 
     private final ComputeEnvironmentRepository computeEnvironmentRepository;
