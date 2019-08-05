@@ -1,0 +1,14 @@
+[
+  {
+    "computeEnvironmentOrder": [
+      {
+        "computeEnvironment": "string"
+      }
+    ],
+    "order": 1,
+    "jobQueueName": "string",
+    "jobQueueArn": "string",
+    "priority": 1,
+    "state": "string"
+  }
+]

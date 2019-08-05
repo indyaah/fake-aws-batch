@@ -1,9 +1,7 @@
 package pro.anuj.tools.aws.batch.repository;
 
-import com.amazonaws.services.batch.model.CreateJobQueueRequest;
-import com.amazonaws.services.batch.model.CreateJobQueueResult;
+import com.amazonaws.services.batch.model.JobQueueDetail;
 
-public interface JobQueueRepository {
+public interface JobQueueRepository extends Repository<JobQueueDetail> {
 
-    CreateJobQueueResult create(CreateJobQueueRequest createJobQueueRequest);
 }

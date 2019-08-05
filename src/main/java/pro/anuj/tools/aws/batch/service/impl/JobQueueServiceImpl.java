@@ -8,11 +8,13 @@ import com.amazonaws.services.batch.model.DescribeJobQueuesRequest;
 import com.amazonaws.services.batch.model.DescribeJobQueuesResult;
 import com.amazonaws.services.batch.model.UpdateJobQueueRequest;
 import com.amazonaws.services.batch.model.UpdateJobQueueResult;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Component;
 import pro.anuj.tools.aws.batch.repository.JobQueueRepository;
 import pro.anuj.tools.aws.batch.service.JobQueueService;
-import pro.anuj.tools.aws.batch.exceptions.NotImplementedException;
+import pro.anuj.tools.exceptions.NotImplementedException;
 
+@Log4j2
 @Component
 public class JobQueueServiceImpl implements JobQueueService {
 

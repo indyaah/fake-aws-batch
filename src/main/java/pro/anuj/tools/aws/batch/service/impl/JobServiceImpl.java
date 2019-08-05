@@ -10,11 +10,13 @@ import com.amazonaws.services.batch.model.SubmitJobRequest;
 import com.amazonaws.services.batch.model.SubmitJobResult;
 import com.amazonaws.services.batch.model.TerminateJobRequest;
 import com.amazonaws.services.batch.model.TerminateJobResult;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Component;
 import pro.anuj.tools.aws.batch.repository.JobRepository;
 import pro.anuj.tools.aws.batch.service.JobService;
-import pro.anuj.tools.aws.batch.exceptions.NotImplementedException;
+import pro.anuj.tools.exceptions.NotImplementedException;
 
+@Log4j2
 @Component
 public class JobServiceImpl implements JobService {
 

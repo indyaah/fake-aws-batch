@@ -1,0 +1,39 @@
+[
+  {
+    "computeEnvironmentArn": "string",
+    "computeEnvironmentName": "string",
+    "computeResources": {
+      "bidPercentage": 1,
+      "desiredvCpus": 1,
+      "ec2KeyPair": "string",
+      "imageId": "string",
+      "instanceRole": "string",
+      "instanceTypes": [
+        "string"
+      ],
+      "launchTemplate": {
+        "launchTemplateId": "string",
+        "launchTemplateName": "string",
+        "version": "string"
+      },
+      "maxvCpus": 1,
+      "minvCpus": 1,
+      "placementGroup": "string",
+      "spotIamFleetRole": "string",
+      "subnets": [
+        "string"
+      ],
+      "tags": {
+        "string": "string"
+      },
+      "type": "string"
+    },
+    "securityGroupIds": [
+      "THIS IS THE INVALID BLOCK, `securityGroupIds` is a sub node in `computeResources`."
+    ],
+    "serviceRole": "string",
+    "state": "string",
+    "type": "string"
+  }
+]
+

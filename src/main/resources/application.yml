@@ -1,0 +1,14 @@
+docker:
+    client:
+        connection-timeout: 100
+        max-per-route-connections: 10
+        max-total-connections: 10
+        read-timeout: 100
+        type: netty
+fake:
+    batch:
+        default-config:
+            compute-environment: classpath:/compute-environment.json
+            job: classpath:/job.json
+            job-definition: classpath:/job-definition.json
+            job-queue: classpath:/job-queue.json

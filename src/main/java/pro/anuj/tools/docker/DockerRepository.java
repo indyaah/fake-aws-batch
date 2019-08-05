@@ -1,5 +1,5 @@
 package pro.anuj.tools.docker;
 
-public class DockerRepository {
+public interface DockerRepository {
 
 }

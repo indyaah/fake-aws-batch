@@ -6,24 +6,44 @@
       "description": "The underlying REST client factory to be used for talking to Docker API. More Details : https://github.com/docker-java/docker-java/wiki."
     },
     {
-      "name": "docker.client.read_timeout",
+      "name": "docker.client.read-timeout",
       "type": "java.lang.Integer",
-      "description": "Socket read timeout for REST API calls."
+      "description": "Socket read timeout for REST API calls. More Details : https://github.com/docker-java/docker-java/wiki."
     },
     {
-      "name": "docker.client.connection_timeout",
+      "name": "docker.client.connection-timeout",
       "type": "java.lang.Integer",
-      "description": "Socket connection timeout for REST API calls."
+      "description": "Socket connection timeout for REST API calls. More Details : https://github.com/docker-java/docker-java/wiki."
     },
     {
-      "name": "docker.client.max_total_connections",
+      "name": "docker.client.max-total-connections",
       "type": "java.lang.Integer",
-      "description": "Maximum number of total connections to be opened to Docker API."
+      "description": "Maximum number of total connections to be opened to Docker API. More Details : https://github.com/docker-java/docker-java/wiki."
     },
     {
-      "name": "docker.client.max_per_route_connections",
+      "name": "docker.client.max-per-route-connections",
       "type": "java.lang.Integer",
-      "description": "Maximum number of total connections to be opened against any given route."
+      "description": "Maximum number of total connections to be opened against any given route. More Details : https://github.com/docker-java/docker-java/wiki."
+    },
+    {
+      "name": "fake.batch.default-config.job",
+      "type": "java.lang.String",
+      "description": "Path to JSON file containing a list of default jobs in the system. Could be a classpath file (ie classpath:/myfile.json), absolute path (ie /home/user/some/path/myfile.json, or relative path to application start director (i.e if application was started from /home/user/ and file is in /home/user/some/path/myfile.json then ./some/path/myfile.json)."
+    },
+    {
+      "name": "fake.batch.default-config.job-queue",
+      "type": "java.lang.String",
+      "description": "Path to JSON file containing a list of default job queues in the system. Could be a classpath file (ie classpath:/myfile.json), absolute path (ie /home/user/some/path/myfile.json, or relative path to application start director (i.e if application was started from /home/user/ and file is in /home/user/some/path/myfile.json then ./some/path/myfile.json)."
+    },
+    {
+      "name": "fake.batch.default-config.job-definition",
+      "type": "java.lang.String",
+      "description": "Path to JSON file containing a list of default job definitions in the system. Could be a classpath file (ie classpath:/myfile.json), absolute path (ie /home/user/some/path/myfile.json, or relative path to application start director (i.e if application was started from /home/user/ and file is in /home/user/some/path/myfile.json then ./some/path/myfile.json)."
+    },
+    {
+      "name": "fake.batch.default-config.compute-environment",
+      "type": "java.lang.String",
+      "description": "Path to JSON file containing a list of default compute environments in the system. Could be a classpath file (ie classpath:/myfile.json), absolute path (ie /home/user/some/path/myfile.json, or relative path to application start director (i.e if application was started from /home/user/ and file is in /home/user/some/path/myfile.json then ./some/path/myfile.json)."
     }
   ]
 }

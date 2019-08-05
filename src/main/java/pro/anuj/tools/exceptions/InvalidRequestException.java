@@ -1,4 +1,4 @@
-package pro.anuj.tools.aws.batch.exceptions;
+package pro.anuj.tools.exceptions;
 
 public class InvalidRequestException extends RuntimeException {
 

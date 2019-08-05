@@ -1,5 +1,7 @@
 package pro.anuj.tools.aws.batch.repository;
 
-public interface ComputeEnvironmentRepository {
+import com.amazonaws.services.batch.model.ComputeEnvironmentDetail;
+
+public interface ComputeEnvironmentRepository extends Repository<ComputeEnvironmentDetail> {
 
 }

@@ -1,0 +1,40 @@
+[
+  {
+    "computeEnvironmentArn": "string",
+    "computeEnvironmentName": "test-compute-env",
+    "computeResources": {
+      "bidPercentage": 1,
+      "desiredvCpus": 1,
+      "ec2KeyPair": "keypair",
+      "imageId": "image",
+      "instanceRole": "instance-role",
+      "instanceTypes": [
+        "instance-type-1",
+        "instance-type-2"
+      ],
+      "launchTemplate": {
+        "launchTemplateId": "launch-template-id",
+        "launchTemplateName": "launch-template-name",
+        "version": "version"
+      },
+      "maxvCpus": 1,
+      "minvCpus": 1,
+      "placementGroup": "placement-group",
+      "securityGroupIds": [
+        "security-group-id1",
+        "security-group-id2"
+      ],
+      "spotIamFleetRole": "spot-iam-fleet-role",
+      "subnets": [
+        "subnets"
+      ],
+      "tags": {
+        "string": "string"
+      },
+      "type": "MANAGED"
+    },
+    "serviceRole": "service-role",
+    "state": "string",
+    "type": "string"
+  }
+]

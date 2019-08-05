@@ -8,11 +8,13 @@ import com.amazonaws.services.batch.model.DescribeComputeEnvironmentsRequest;
 import com.amazonaws.services.batch.model.DescribeComputeEnvironmentsResult;
 import com.amazonaws.services.batch.model.UpdateComputeEnvironmentRequest;
 import com.amazonaws.services.batch.model.UpdateComputeEnvironmentResult;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Component;
 import pro.anuj.tools.aws.batch.repository.ComputeEnvironmentRepository;
 import pro.anuj.tools.aws.batch.service.ComputeEnvironmentService;
-import pro.anuj.tools.aws.batch.exceptions.NotImplementedException;
+import pro.anuj.tools.exceptions.NotImplementedException;
 
+@Log4j2
 @Component
 public class ComputeEnvironmentServiceImpl implements ComputeEnvironmentService {
 

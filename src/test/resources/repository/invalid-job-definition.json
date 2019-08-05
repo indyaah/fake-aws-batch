@@ -1,0 +1,17 @@
+[
+  {
+    "containerProperties": {
+      "image": "busybox",
+      "command": [
+        "sleep",
+        "10"
+      ],
+      "vcpus": 1
+    },
+    "memory": 128,
+    "type": "container",
+    "jobDefinitionName": "test-job",
+    "revision" : 1,
+    "jobDefinitionArn" : "idk:1"
+  }
+]

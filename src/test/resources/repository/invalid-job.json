@@ -1,0 +1,10 @@
+[
+  {
+    "jobId": "string",
+    "jobName": "test-job",
+    "jobQueue": "HighPriority",
+    "jobDefinition": {
+      "name": "sleep60"
+    }
+  }
+]

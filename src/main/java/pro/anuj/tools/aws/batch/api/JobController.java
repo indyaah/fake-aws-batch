@@ -1,5 +1,8 @@
 package pro.anuj.tools.aws.batch.api;
 
+import static org.springframework.http.HttpStatus.OK;
+import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
+
 import com.amazonaws.services.batch.model.CancelJobRequest;
 import com.amazonaws.services.batch.model.CancelJobResult;
 import com.amazonaws.services.batch.model.DescribeJobsRequest;
@@ -10,15 +13,15 @@ import com.amazonaws.services.batch.model.SubmitJobRequest;
 import com.amazonaws.services.batch.model.SubmitJobResult;
 import com.amazonaws.services.batch.model.TerminateJobRequest;
 import com.amazonaws.services.batch.model.TerminateJobResult;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import pro.anuj.tools.aws.batch.service.JobService;
 
-import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
-
 @RestController
-public class JobController {
+public class JobController implements BatchController {
+
     private final JobService jobService;
 
     public JobController(JobService jobService) {
@@ -26,27 +29,28 @@ public class JobController {
     }
 
     @PostMapping(value = "/v1/canceljob", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
-    public CancelJobResult cancel(@RequestBody CancelJobRequest request) {
-        return jobService.cancelJob(request);
+    public ResponseEntity<CancelJobResult> cancel(@RequestBody CancelJobRequest request) {
+        return new ResponseEntity<>(jobService.cancelJob(request), headers(), OK);
     }
 
     @PostMapping(value = "/v1/submitjob", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
-    public SubmitJobResult submit(@RequestBody SubmitJobRequest request) {
-        return jobService.submitJob(request);
+    public ResponseEntity<SubmitJobResult> submit(@RequestBody SubmitJobRequest request) {
+        return new ResponseEntity<>(jobService.submitJob(request), headers(), OK);
     }
 
     @PostMapping(value = "/v1/terminatejob", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
-    public TerminateJobResult terminate(@RequestBody TerminateJobRequest request) {
-        return jobService.terminateJob(request);
+    public ResponseEntity<TerminateJobResult> terminate(@RequestBody TerminateJobRequest request) {
+        return new ResponseEntity<>(jobService.terminateJob(request), headers(), OK);
     }
 
     @PostMapping(value = "/v1/describejobs", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
-    public DescribeJobsResult describe(@RequestBody DescribeJobsRequest request) {
-        return jobService.describeJobs(request);
+    public ResponseEntity<DescribeJobsResult> describe(@RequestBody DescribeJobsRequest request) {
+        return new ResponseEntity<>(jobService.describeJobs(request), headers(), OK);
     }
 
     @PostMapping(value = "/v1/listjobs", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
-    public ListJobsResult list(@RequestBody ListJobsRequest request) {
-        return jobService.listJobs(request);
+    public ResponseEntity<ListJobsResult> list(@RequestBody ListJobsRequest request) {
+        return new ResponseEntity<>(jobService.listJobs(request), headers(), OK);
     }
+
 }

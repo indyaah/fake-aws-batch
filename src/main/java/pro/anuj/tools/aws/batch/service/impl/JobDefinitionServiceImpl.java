@@ -6,11 +6,13 @@ import com.amazonaws.services.batch.model.DescribeJobDefinitionsRequest;
 import com.amazonaws.services.batch.model.DescribeJobDefinitionsResult;
 import com.amazonaws.services.batch.model.RegisterJobDefinitionRequest;
 import com.amazonaws.services.batch.model.RegisterJobDefinitionResult;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Component;
-import pro.anuj.tools.aws.batch.exceptions.NotImplementedException;
+import pro.anuj.tools.exceptions.NotImplementedException;
 import pro.anuj.tools.aws.batch.repository.JobDefinitionRepository;
 import pro.anuj.tools.aws.batch.service.JobDefinitionService;
 
+@Log4j2
 @Component
 public class JobDefinitionServiceImpl implements JobDefinitionService {
 

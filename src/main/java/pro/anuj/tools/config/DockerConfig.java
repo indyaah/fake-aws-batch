@@ -10,8 +10,9 @@ import com.github.dockerjava.netty.NettyDockerCmdExecFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
-import org.springframework.core.env.Environment;
+import org.springframework.context.annotation.Configuration;
 
+@Configuration
 public class DockerConfig {
 
     private final Integer dockerClientReadTimeOut;
@@ -19,13 +20,11 @@ public class DockerConfig {
     private final Integer dockerClientMaxTotalConnections;
     private final Integer dockerClientMaxPerRouteConnection;
 
-    Environment environment;
-
     public DockerConfig(
-        @Value("docker.client.read_timeout") final Integer dockerClientReadTimeOut,
-        @Value("docker.client.connection_timeout") final Integer dockerClientConnectTimeout,
-        @Value("docker.client.max_total_connections") final Integer dockerClientMaxTotalConnections,
-        @Value("docker.client.max_per_route_connections") final Integer dockerClientMaxPerRouteConnection) {
+        @Value("${docker.client.read-timeout}") final Integer dockerClientReadTimeOut,
+        @Value("${docker.client.connection-timeout}") final Integer dockerClientConnectTimeout,
+        @Value("${docker.client.max-total-connections}") final Integer dockerClientMaxTotalConnections,
+        @Value("${docker.client.max-per-route-connections}") final Integer dockerClientMaxPerRouteConnection) {
 
         this.dockerClientReadTimeOut = dockerClientReadTimeOut;
         this.dockerClientConnectTimeout = dockerClientConnectTimeout;
